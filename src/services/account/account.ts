@@ -34,7 +34,7 @@ export default class account {
 
         const data = {email};
 
-        const token = jwt.sign({data}, environment.jwtSecret, {expiresIn: '1 day'});
+        const token = jwt.sign({data}, environment.jwtSecret, {expiresIn: '30s'});
         
         resolve({token, email});
         // resolve({user, token, ip});
